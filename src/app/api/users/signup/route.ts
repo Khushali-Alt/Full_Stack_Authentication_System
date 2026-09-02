@@ -26,8 +26,8 @@ export async function POST(request: NextRequest) {
         }
 
         //hash password
-        const salt = await bcryptjs.genSalt(10);
-        const hashedPassword = await bcryptjs.hash(password, salt );
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt );
 
         //to save user in the dataBase
         //create user first
