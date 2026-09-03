@@ -30,6 +30,7 @@ export async function POST(request: NextRequest) {
         }
 
         //create token data
+        //later on , i can extraact the data from the token and use it to get the user data from the database
         const tokenData = {
             id: user._id,
             email: user.email,
