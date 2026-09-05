@@ -58,7 +58,7 @@ const mailOptions = {
   html: `
       <p>
       Click me
-          <a href="${process.env.DOMAIN}/verifytoken?token=${hashedToken}">
+          <a href="${process.env.DOMAIN}/verifyemail?token=${hashedToken}">
             here
      </a> 
      to ${
@@ -66,6 +66,8 @@ const mailOptions = {
         ? "verify your email" 
         : "reset your password"
     }
+    or copy and paste this link in your browser. <br/>
+    ${process.env.DOMAIN}/verifyemail?token=${hashedToken}
     </p>
     `
  };
